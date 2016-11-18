@@ -128,6 +128,7 @@ module.exports =
               (sfx = sfxMatch[1]) in suffixes and
               path.indexOf('node_modules') is -1 and
               path.indexOf('bower_components') is -1 and
+              path.indexOf('.meteor') is -1 and
               (not @gitignore or @gitignore.accepts path)
 
             code = fs.readFileSync absPath, 'utf8'
